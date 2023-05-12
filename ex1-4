@@ -1,0 +1,8 @@
+sudo docker run -d -it --name ex4  ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+sudo docker exec -it ex4 bash
+apt-get update
+apt-get -y install curl
+
+Toisessa terminaalissa:
+sudo docker attach ex4
+helsinki.fi

@@ -1,0 +1,29 @@
+Script started on 2023-05-12 12:15:02+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="89" LINES="40"]
+[?2004h]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ sudo docker exec -it ex3 bashrun -d -it --name ex3 devopsdockeruh/simple-web-service:ubuntu[A]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[24Pexec -it ex3 bash
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo docker images
+[?2004l[sudo] password for teemu: 
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago   15.7MB
+[?2004h]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ sudo docker exec [K[K[K[K[Krun -d --name ex5 devopsdockeruh/simple-w ebservice[K[K[K[K[K[K[K-service:alpine
+[?2004l3713cff61c3ae91c7f9de6771e0945c3e4d56c7b3b812f71df3881c91ed7fe9c
+[?2004h]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ sudo docker exec -it ex5 sh
+[?2004l/usr/src/app # [6ntail -f ./text.log
+2023-05-12 09:19:19 +0000 UTC
+2023-05-12 09:19:21 +0000 UTC
+2023-05-12 09:19:23 +0000 UTC
+2023-05-12 09:19:25 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-12 09:19:27 +0000 UTC
+2023-05-12 09:19:29 +0000 UTC
+2023-05-12 09:19:31 +0000 UTC
+2023-05-12 09:19:33 +0000 UTC
+2023-05-12 09:19:35 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-12 09:19:37 +0000 UTC
+^C
+/usr/src/app # [6nexit
+[?2004h]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ [?2004l
+exit
+
+Script done on 2023-05-12 12:19:42+03:00 [COMMAND_EXIT_CODE="130"]

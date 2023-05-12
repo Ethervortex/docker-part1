@@ -1,0 +1,14 @@
+# Start from ubuntu image
+FROM ubuntu:20.04
+
+# Use /usr/src/app
+WORKDIR /usr/src/app
+
+# Copy web.sh file
+COPY web.sh .
+
+# Install curl
+RUN apt-get update && apt-get install -y curl
+
+# Running docker run
+CMD ./web.sh

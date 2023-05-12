@@ -1,0 +1,25 @@
+Script started on 2023-05-12 11:17:33+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="89" LINES="40"]
+[?2004h]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ sudo docker run -d -it --name ex3 devopsdockeruh/simp le-web-service:ubuntu
+[?2004l[sudo] password for teemu: 
+252c4bc4ce39fe73089f5a272851b18a6ac5c2be953834a9fbb7ebd251cc5b0d
+[?2004h]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ sudo e[Kdocker exec -it ex3 bash
+[?2004l]0;root@252c4bc4ce39: /usr/src/approot@252c4bc4ce39:/usr/src/app# tail -f ./text.log
+2023-05-12 08:19:37 +0000 UTC
+2023-05-12 08:19:39 +0000 UTC
+2023-05-12 08:19:41 +0000 UTC
+2023-05-12 08:19:43 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-12 08:19:45 +0000 UTC
+2023-05-12 08:19:47 +0000 UTC
+2023-05-12 08:19:49 +0000 UTC
+2023-05-12 08:19:51 +0000 UTC
+2023-05-12 08:19:53 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-12 08:19:55 +0000 UTC
+^C
+]0;root@252c4bc4ce39: /usr/src/approot@252c4bc4ce39:/usr/src/app# exit
+exit
+[?2004h]0;teemu@hal: ~/Documents/docker-part1[01;32mteemu@hal[00m:[01;34m~/Documents/docker-part1[00m$ [?2004l
+exit
+
+Script done on 2023-05-12 11:20:03+03:00 [COMMAND_EXIT_CODE="130"]
