@@ -1,0 +1,8 @@
+Exercise "kurssitiedot" from Fullstack Open course was used for this exercise.
+Github repository: https://github.com/Ethervortex/fullstack_open
+
+Project was cloned and Dockerfile created. Project and created Dockerfile was pushed to new repository:
+https://github.com/Ethervortex/kurssitiedot-docker
+
+New web service "kurssitiedot" was created in Render. Render created service using Dockerfile.
+Service is available on: https://kurssitiedot.onrender.com
