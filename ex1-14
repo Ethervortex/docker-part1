@@ -1,0 +1,7 @@
+Frontend:
+docker build -t ex14 .
+docker run -it --rm -p 5000:5000 --name ex14 ex14
+
+Backend:
+docker build -t ex14-backend
+docker run -it --rm -p 8080:8080 ex14-backend
