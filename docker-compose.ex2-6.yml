@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    image: frontend
+    build:
+      context: ./example-frontend
+      dockerfile: Dockerfile_ex1-14_frontend
+    ports:
+      - 5000:5000
+    container_name: frontend
+
+  server:
+    image: backend
+    build:
+      context: ./example-backend
+      dockerfile: Dockerfile_ex1-14_backend
+    environment:
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=db
+      - POSTGRES_USER=tr
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DATABASE=test_db
+    ports:
+      - 8080:8080
+    container_name: backend
+
+  redis:
+    image: redis
+    command: ['redis-server', '--appendonly', 'yes']
+
+  db:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: tr
+      POSTGRES_DB: test_db
+    container_name: db
