@@ -1,0 +1,7 @@
+I'm learning fullstack development by building my own investment application. This app
+fetches various stock index data from the web (index can be selected by the user) and
+allows search of stocks from different indices by name or ticker. I will also implement 
+various filtering in the future (i.e. stock screener).
+
+I've created Dockerfiles for both frontend and backend and also docker-compose.yml.
+My app will need database also, but that is future work. I will containerize that too.
