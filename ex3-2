@@ -1,0 +1,4 @@
+Github repository: https://github.com/Ethervortex/kurssitiedot-docker
+
+Render supports auto-deploy on every pushh to Github repository by just allowing Render
+to connect to repository and selecting 'Yes' for auto-deploy from settings.
