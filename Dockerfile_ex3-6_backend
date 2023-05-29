@@ -2,7 +2,8 @@ FROM golang:1.16
 EXPOSE 8080
 COPY . /usr/src/app
 WORKDIR /usr/src/app
-RUN go build
+RUN go build && adduser appuser
 ENV PORT=8080
-ENV REQUEST_ORIGIN=http://localhost:5000
+#ENV REQUEST_ORIGIN=http://localhost:5000
+USER appuser
 CMD ["./server"]

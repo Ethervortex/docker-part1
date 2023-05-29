@@ -4,5 +4,7 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN go build
 ENV PORT=8080
-ENV REQUEST_ORIGIN=http://localhost:5000
+#ENV REQUEST_ORIGIN=http://localhost:5000
+RUN adduser appuser
+USER appuser
 CMD ["./server"]

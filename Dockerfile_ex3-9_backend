@@ -1,0 +1,14 @@
+FROM golang:1.20-alpine AS build-stage
+RUN apk update && apk add --no-cache git
+WORKDIR $GOPATH/src/myapp/
+COPY . .
+RUN adduser -D appuser
+RUN go get -d -v && go build -o /go/bin/backend
+
+FROM scratch
+COPY --from=build-stage /etc/passwd /etc/passwd
+COPY --from=build-stage /go/bin/backend /go/bin/backend
+ENV PORT=8080
+USER appuser
+EXPOSE 8080
+CMD ["/go/bin/backend"]

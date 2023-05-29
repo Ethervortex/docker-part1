@@ -1,0 +1,7 @@
+Before:
+frontend: 1.26GB
+backend: 1.07GB
+
+After using alpine versions:
+frontend: 473MB
+backend: 487MB
