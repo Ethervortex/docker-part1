@@ -1,0 +1,6 @@
+FROM docker:latest
+WORKDIR /app
+COPY ex3-4build.sh .
+RUN chmod +x ex3-4build.sh
+RUN apk add --no-cache git
+ENTRYPOINT ["/bin/sh", "ex3-4build.sh"]
